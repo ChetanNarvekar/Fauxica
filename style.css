@@ -1,0 +1,278 @@
+html body{
+  margin: 0;
+  background-color: #EEEEEE;
+}
+
+header {
+  position:sticky;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+
+.flex{
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  list-style: none;
+  margin: 0 3rem;
+  justify-content: space-around;
+  font-family: 'Oswald', sans-serif;
+}
+
+.logo {
+  margin:0.75rem 3.5rem;
+}
+
+.hero{
+  position:relative;
+  gap: 2em;
+  justify-content: space-evenly;
+}
+
+.text-1 {
+  position: absolute;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.80rem;
+  left: 5.5rem
+}
+
+.text-2{
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  left: 5.5rem;
+  top: 10rem;
+}
+
+.btn {
+  position: absolute;
+  font-size: 1rem;
+  left: 7.5rem;
+  top: 16rem;
+  justify-content:space-between;
+}
+
+.left-btn{
+  position: absolute;
+  height: 2em;
+  width: 12em;
+  background-color: white;
+  border-radius: 0.5em;
+  margin: 1rem;
+  top: 0.85rem;
+  left: -1rem;
+}
+
+.right-btn svg{
+  transition: transform .3s;
+}
+.btn-text1{
+  position: absolute;
+  top: -0.90rem;
+  left: 1.5em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-text2{
+  position: absolute;
+  left: 20em;
+  top: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  height: 2em;
+  width: 12em;
+}
+
+.news{
+  position: absolute;
+  height: 6rem;
+  width: 35rem;
+  background-color: white;
+  border: solid;
+  border-color: grey;
+  border-radius: 0.5em;
+  left: 5.5rem;
+  top: 23rem
+}
+
+.news-text{
+  position: absolute;
+  font-size: 1rem;
+  left: 10rem;
+  top:-0.90rem
+}
+
+.vl {
+  position:absolute;
+  border-left: 3px dotted black;
+  height: 3rem;
+  left:7rem;
+  top: 2rem;
+}
+
+.foot{
+  position: absolute;
+  bottom: 0.01rem;
+  background-color: #F9F7F7;
+  width: 100%;
+}
+
+ .foot-img{
+  width: 14px;
+  margin:0 0.4rem;
+
+}
+
+.foot-text{
+  margin: 0.1rem 1.5rem;
+  color:darkgray;
+} 
+
+.right-col{
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas: 
+  "left right"
+  "left bottom";
+}
+
+.card{
+  border-radius: 1rem;
+  background-color: white;
+  padding: 1.5em;
+  display: flex;
+  align-items: flex-end;
+  background-size: 120%;
+  transition: transform 800ms;
+}
+
+.card-details{
+  width: 90%;
+  background-color: white;
+  border-radius: 0.80rem;
+  padding: 1rem;
+  height:2rem;
+  transition: transform 800ms;
+}
+
+.card-detail1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height:.75rem;
+}
+
+.card-1{
+  grid-area: left;
+  height: 28rem;
+  width: 15rem;
+  background-image: url(Fauxica/images/clothing1.jpg);
+  margin-left: 25rem;
+}
+
+.card-1:before{
+  position: absolute;
+  content:"";
+  background: url(Fauxica/images/tag.svg) no-repeat;
+  width:40%;
+  height:100%;
+  left:42rem;
+  top:1rem;
+  pointer-events: none;
+}
+
+.card-2{
+/*   height: 25rem; */
+  width: 15rem;
+  background-image: url(Fauxica/images/clothing2.jpg);
+}
+
+.card-3{
+/*   height: 25rem; */
+  width: 15rem;
+  background-image: url(Fauxica/images/clothing3.jpg);
+  background-size: 100%;
+}
+
+.type{
+  margin-top: 1rem;
+}
+
+.vl1{
+  border-left: 2px solid  #E4E4E4;
+  height: 3rem;
+  margin-top: 1.5rem;
+}
+
+.price{
+  font-size: 1.2rem;
+  margin:1rem 1rem 0 0;
+}
+
+.actives:hover{
+  position: relative;
+  content:"";
+  width:5%;
+  height: 1px;
+  border-bottom: 3px solid black;
+  bottom: -3px;
+}
+
+.btn-text1:hover{
+  font-size: 0.8rem;
+}
+
+.right-btn:hover svg{
+  transform: translateX(10px);
+}
+
+.btn-text2:hover{
+  text-decoration: underline;
+}
+
+.card:hover{
+  background-size: 130%;
+}
+
+.card:hover .card-details{
+  transform: translateY(-10px);
+}
+
+.overlay{
+  position: absolute;
+  z-index: 999;
+  background: white;
+  width: 100%;
+  height: 100%;
+  animation: reveal 1s ease-in forwards;
+  transform-origin: bottom;
+}
+
+@keyframes reveal {
+  from {
+    transform: scaleY(1);
+  }
+  to{
+    transform: scaleY(0);
+  }
+}
+
+main{
+  animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  transform: scale(0.4);
+}
+
+@keyframes growIn {
+  to{
+    transform: scale(1);
+  }
+}
